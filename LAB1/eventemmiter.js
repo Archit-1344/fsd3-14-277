@@ -16,7 +16,7 @@ task.once('greet',()=>{
     console.log("System Started...");
 })
 
-task.off("exit", (name) =>{
+task.off('exit', (name) =>{
     console.log(`system is shutting down by ${name}`);
 });
 
@@ -25,7 +25,7 @@ task.off("exit", (name) =>{
 task.emit('greet','Arpit Agnihotri');
 //task.emit('greet','arpit');
 //task.emit('greet','arpit agnihotri');
-//task.emit("exit",'Manager');
+task.emit('exit','Manager');
 
 const shuttingDown=(name)=>
 
