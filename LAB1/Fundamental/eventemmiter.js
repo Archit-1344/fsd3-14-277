@@ -14,7 +14,7 @@ task.on('greet',()=>{
 
 task.once('greet',()=>{
     console.log("System Started...");
-})
+}) ;
 
 task.off('exit', (name) =>{
     console.log(`system is shutting down by ${name}`);

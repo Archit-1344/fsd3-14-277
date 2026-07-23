@@ -9,7 +9,7 @@ const sayHi = (name) => {
 }
 
 sayHello("Archit Shrivastava");
-sayHi("Archit Shrivastava");
+sayHi("Archit");
 
 
 
