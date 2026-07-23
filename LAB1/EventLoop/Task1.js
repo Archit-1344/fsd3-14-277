@@ -25,7 +25,7 @@ main() ;
 // in asynchronous we use event loop to manage the call stack 
 //in synchronous we use event loop to manage the call stack and the callback queue.
 //asynchronous using times 
-// 1. set timeouy
+// 1. set timeout
 // 2. set immediate
 // 3. Process.next tick
 // 4. set Interval
