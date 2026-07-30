@@ -2,14 +2,14 @@ import readline from "readline/promises" ;
 import {stdin , stdout} from "process" ;
 import {readFile , writeFile} from "fs/promises" ;
 //DATABASE USING FILE STARTS 
-const FILE ="product.json" ;
+const FILE ="CART.json" ;
 
-const getCart = () => {
+const getCart = async () => {
     const data = await readFile(FILE , "utf-8")
     return JSON.parse(data) ;
 };
 
-const saveCart = () => {
+const saveCart = async (cart) => {
     await writeFile (FILE , JSON.stringify(cart , null , 2)) ;
 };
 
@@ -30,7 +30,7 @@ const displayCart = async () =>{
         return ;
     }
     console.table(cart) ;
-    const total = cart.reduce((sum , item) => sum + item.price + item.qty , 0) ;
+    const total = cart.reduce((sum , item) => sum + (item.price * item.qty) , 0) ;
     console.log(`Total payble amount Rs. ${total}`) ;
 } ;
 const main = async () => {
@@ -48,11 +48,19 @@ const main = async () => {
 
     switch(Number(choice)) {
         case 1 :
-            console.log("show cart") ;
+             await displayCart() ;
             break ;
         case 2 :
-            console.log("add product") ;
+            const item = await cin.question("enter id , name , price , qty") ;
+            const [id , name , price , qty ] = item.split(',').map((p)=>p.trim()) ;
+            await addTocart({
+                id: Number (id) ,
+                name ,
+                price: Number(price) ,
+                qty: Number(qty) ,
+            }) ;
             break ;
+
         case 3 :
             console.log("remove product") ;
             break ;
