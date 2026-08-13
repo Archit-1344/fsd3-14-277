@@ -1,11 +1,5 @@
 [
   {
-    "id": 1,
-    "name": "laptop",
-    "price": 300,
-    "qty": 1
-  },
-  {
     "id": 2,
     "name": "mouse",
     "price": 400,
