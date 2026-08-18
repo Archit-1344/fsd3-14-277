@@ -53,9 +53,9 @@ const removeProduct = async (product) =>{
         if(isFoundInCart){
             isFoundInCart.qty = product.qty ;
             await saveCart(cart) ;
-            console.log(`${product.id} quantity updated`) ;
+            console.log(`${isFoundInCart.name} quantity updated`) ;
         } else {
-            console.log(`${product.id} not found in cart`) ;
+            console.log(`${isFoundInCart.name} not found in cart`) ;
         }
     } ;
 const main = async () => {
