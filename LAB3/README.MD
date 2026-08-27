@@ -6,3 +6,10 @@ ctrl+c to terminate the server
 npm - node package manager 
 // console.log("socket info") ;
 // console.log(req.socket);
+#API
+any api can be of four types 
+*Post - create
+*\
+
+
+by default browser can check only get request 
