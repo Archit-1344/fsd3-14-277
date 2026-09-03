@@ -6,7 +6,19 @@ const server = http.createServer((req, res) => {
     res.end('<h1>Home Page</h1>');
   }
   else if (req.url === '/product' && req.method === 'GET') {
-    res.end('<h1>Show Product</h1>');
+   const products = [
+    {
+      id : 1 , 
+      name : "mobile" ,
+      price : 10000 ,
+    } ,
+    {
+      id : 2 ,
+      name : "laptop" ,
+      price : 50000 ,
+    }
+   ] ;
+   res.end(JSON.stringify(products)) ;
   }
   else if (req.url === '/product' && req.method === 'POST') {
     res.end('<h1>Add Product</h1>');
