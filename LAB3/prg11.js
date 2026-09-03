@@ -21,7 +21,28 @@ const server = http.createServer((req, res) => {
    res.end(JSON.stringify(products)) ;
   }
   else if (req.url === '/product' && req.method === 'POST') {
-    res.end('<h1>Add Product</h1>');
+     // Retrieve data from client
+        let body = '';
+
+        req.on('data', (chunk) => {
+            body += chunk;
+        });
+
+        req.on('end', () => {
+            const product = JSON.parse(body);
+
+            // Add data to database
+
+            res.writeHead(201, {
+                "content-type": "application/json"
+            });
+
+            // Send back the status
+            res.end(JSON.stringify({
+                msg: 'PRODUCT ADDED',
+                product
+            }));
+        });
   }
   else if (req.url === '/product' && req.method === 'PUT') {
     res.end('<h1>Update Product</h1>');
