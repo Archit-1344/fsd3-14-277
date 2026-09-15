@@ -38,14 +38,14 @@ const server = http.createServer(async (req, res) => {
     console.log("query:", query);
     console.log("Method:", method);
 
-    // GET - Get all teams
+    
     if (pathname === "/api/v1/teams" && method === "GET") {
         const allTeams = teams.getAllTeams();
 
         return sendJson(res, 200, allTeams);
     }
 
-    // POST - Add a new team
+    
     else if (pathname === "/api/v1/teams" && method === "POST") {
         try {
             const newTeam = await parseJSONBody(req);
@@ -60,7 +60,7 @@ const server = http.createServer(async (req, res) => {
         }
     }
 
-    // GET - Get team by ID
+    
     else if (pathname.startsWith("/api/v1/teams/") && method === "GET") {
         const id = Number(pathname.split("/").pop());
 
@@ -75,7 +75,7 @@ const server = http.createServer(async (req, res) => {
         return sendJson(res, 200, team);
     }
 
-    // PUT - Update team by ID
+   
     else if (pathname.startsWith("/api/v1/teams/") && method === "PUT") {
         try {
             const id = Number(pathname.split("/").pop());
@@ -98,7 +98,6 @@ const server = http.createServer(async (req, res) => {
         }
     }
 
-    // DELETE - Delete team by ID
     else if (pathname.startsWith("/api/v1/teams/") && method === "DELETE") {
         const id = Number(pathname.split("/").pop());
 
@@ -115,7 +114,7 @@ const server = http.createServer(async (req, res) => {
         });
     }
 
-    // Invalid route
+
     else {
         return sendJson(res, 404, {
             error: "Route not found"
