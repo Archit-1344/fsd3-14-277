@@ -1,0 +1,351 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us - OtakuStore</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            color: #222;
+        }
+
+        /* NAVBAR */
+
+        header {
+            background: #111;
+            color: white;
+            padding: 18px 7%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ff416c;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+        }
+
+        nav a:hover {
+            color: #ff416c;
+        }
+
+
+        /* PAGE HEADER */
+
+        .page-header {
+            background: linear-gradient(
+                135deg,
+                #171717,
+                #3b1024,
+                #111
+            );
+
+            color: white;
+
+            text-align: center;
+
+            padding: 70px 20px;
+        }
+
+        .page-header h1 {
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+
+        .page-header p {
+            color: #ccc;
+            font-size: 18px;
+        }
+
+
+        /* ABOUT */
+
+        .about {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 0 25px;
+        }
+
+        .about-box {
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+
+            box-shadow:
+                0 4px 15px rgba(0,0,0,0.1);
+
+            margin-bottom: 30px;
+        }
+
+        .about-box h2 {
+            color: #ff416c;
+            margin-bottom: 15px;
+        }
+
+        .about-box p {
+            color: #555;
+            line-height: 1.7;
+        }
+
+
+        /* FEATURES */
+
+        .features {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(200px, 1fr));
+
+            gap: 20px;
+        }
+
+        .feature {
+            background: white;
+
+            padding: 25px;
+
+            text-align: center;
+
+            border-radius: 10px;
+
+            box-shadow:
+                0 3px 12px rgba(0,0,0,0.08);
+        }
+
+        .feature h3 {
+            margin: 10px 0;
+            color: #ff416c;
+        }
+
+        .feature p {
+            color: #777;
+            line-height: 1.5;
+        }
+
+
+        /* FOOTER */
+
+        footer {
+            background: #111;
+            color: #aaa;
+
+            text-align: center;
+
+            padding: 30px;
+
+            margin-top: 60px;
+        }
+
+        footer span {
+            color: #ff416c;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- NAVIGATION -->
+
+    <header>
+
+        <div class="logo">
+            OtakuStore
+        </div>
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="index.html#products">
+                Shop
+            </a>
+
+            <a href="index.html#categories">
+                Categories
+            </a>
+
+            <a href="enquiry.html">
+                Enquiry
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- PAGE HEADER -->
+
+    <section class="page-header">
+
+        <h1>
+            About OtakuStore
+        </h1>
+
+        <p>
+            Made by anime fans, for anime fans.
+        </p>
+
+    </section>
+
+
+
+    <!-- ABOUT CONTENT -->
+
+    <section class="about">
+
+
+        <div class="about-box">
+
+            <h2>
+                Who We Are
+            </h2>
+
+            <p>
+                Welcome to OtakuStore, your destination for
+                anime-inspired merchandise and collectibles.
+                We created this store for fans who want to
+                bring their favorite anime worlds into their
+                everyday lives.
+            </p>
+
+        </div>
+
+
+
+        <div class="about-box">
+
+            <h2>
+                What We Offer
+            </h2>
+
+            <p>
+                Our collection includes anime T-shirts,
+                hoodies, figures, accessories and other
+                merchandise inspired by popular series such
+                as One Piece, Naruto, Demon Slayer and
+                Jujutsu Kaisen.
+            </p>
+
+        </div>
+
+
+
+        <div class="about-box">
+
+            <h2>
+                Our Mission
+            </h2>
+
+            <p>
+                Our mission is simple — to make anime
+                merchandise easy to discover while creating
+                a fun shopping experience for the anime
+                community.
+            </p>
+
+        </div>
+
+
+
+        <!-- FEATURES -->
+
+        <div class="features">
+
+            <div class="feature">
+
+                <h1>🎌</h1>
+
+                <h3>
+                    Anime Inspired
+                </h3>
+
+                <p>
+                    Merchandise inspired by
+                    your favorite anime.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <h1>⭐</h1>
+
+                <h3>
+                    Quality
+                </h3>
+
+                <p>
+                    Products selected with
+                    anime fans in mind.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <h1>❤️</h1>
+
+                <h3>
+                    For Fans
+                </h3>
+
+                <p>
+                    Built around the passion
+                    of the anime community.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 <span>OtakuStore</span>
+            | Made for Anime Fans
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
+```

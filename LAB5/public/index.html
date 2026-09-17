@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>OtakuStore - Anime Merchandise</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            color: #222;
+        }
+
+        /* ================= NAVBAR ================= */
+
+        header {
+            background: #111;
+            color: white;
+
+            padding: 18px 7%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ff416c;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #ff416c;
+        }
+
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 400px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #171717,
+                    #3b1024,
+                    #111
+                );
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+            color: white;
+
+            padding: 40px;
+        }
+
+        .hero-content {
+            max-width: 700px;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: #ff416c;
+        }
+
+        .hero p {
+            color: #ccc;
+            font-size: 19px;
+            line-height: 1.6;
+        }
+
+        .shop-btn {
+            display: inline-block;
+
+            margin-top: 25px;
+
+            padding: 14px 32px;
+
+            background: #ff416c;
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 6px;
+
+            font-weight: bold;
+        }
+
+        .shop-btn:hover {
+            background: #e7355c;
+        }
+
+
+        /* ================= CATEGORIES ================= */
+
+        .categories {
+            padding: 40px 7%;
+            text-align: center;
+        }
+
+        .categories h2 {
+            margin-bottom: 25px;
+        }
+
+        .category-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .category {
+            background: white;
+            padding: 14px 25px;
+            border-radius: 30px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+
+            cursor: pointer;
+        }
+
+        .category:hover {
+            background: #ff416c;
+            color: white;
+        }
+
+
+        /* ================= PRODUCTS ================= */
+
+        .products {
+            padding: 30px 7% 60px;
+        }
+
+        .products h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 35px;
+        }
+
+        .product-container {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(230px, 1fr));
+
+            gap: 25px;
+        }
+
+
+        /* ================= PRODUCT CARD ================= */
+
+        .product {
+
+            background: white;
+
+            border-radius: 12px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 4px 15px rgba(0,0,0,0.1);
+
+            transition: 0.3s;
+        }
+
+        .product:hover {
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 8px 25px rgba(0,0,0,0.15);
+        }
+
+
+        .product-image {
+            width: 100%;
+            height: 280px;
+
+            object-fit: cover;
+
+            background: #eee;
+        }
+
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-info h3 {
+            font-size: 19px;
+            margin-bottom: 8px;
+        }
+
+        .anime-name {
+            color: #888;
+            font-size: 14px;
+        }
+
+        .price {
+            color: #ff416c;
+
+            font-size: 21px;
+
+            font-weight: bold;
+
+            margin: 15px 0;
+        }
+
+        .buy-btn {
+
+            display: block;
+
+            width: 100%;
+
+            padding: 11px;
+
+            background: #111;
+
+            color: white;
+
+            text-align: center;
+
+            text-decoration: none;
+
+            border-radius: 6px;
+        }
+
+        .buy-btn:hover {
+            background: #ff416c;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+
+            background: #111;
+
+            color: #aaa;
+
+            text-align: center;
+
+            padding: 30px;
+
+        }
+
+        footer span {
+            color: #ff416c;
+        }
+
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 650px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header>
+
+        <div class="logo">
+            OtakuStore
+        </div>
+
+        <nav>
+
+    <a href="index.html">Home</a>
+
+    <a href="index.html#products">Shop</a>
+
+    <a href="index.html#categories">Categories</a>
+
+    <a href="/about">About</a>
+
+    <a href="/enquiry">Enquiry</a>
+
+    <a href="#">🛒 Cart</a>
+
+</nav>
+
+    </header>
+
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>
+                Anime <span>Merchandise</span>
+                for Otakus
+            </h1>
+
+            <p>
+                Discover stylish T-shirts, collectibles
+                and accessories inspired by your
+                favorite anime.
+            </p>
+
+            <a href="#products" class="shop-btn">
+                Explore Collection
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= CATEGORIES ================= -->
+
+    <section class="categories" id="categories">
+
+        <h2>
+            Shop By Anime
+        </h2>
+
+        <div class="category-container">
+
+            <div class="category">
+                One Piece
+            </div>
+
+            <div class="category">
+                Naruto
+            </div>
+
+            <div class="category">
+                Demon Slayer
+            </div>
+
+            <div class="category">
+                Jujutsu Kaisen
+            </div>
+
+            <div class="category">
+                Attack on Titan
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= PRODUCTS ================= -->
+
+    <section class="products" id="products">
+
+        <h2>
+            Featured Products
+        </h2>
+
+
+        <div class="product-container">
+
+
+            <!-- ONE PIECE -->
+
+            <div class="product">
+
+                <img
+                    class="product-image"
+                    src="https://common-ground.in/cdn/shop/files/Front_1_c_1_0649379d-4d28-4f73-a99a-cade31aa746a.jpg?v=1773998602&width=1946"
+                    alt="One Piece T-Shirt"
+                >
+
+                <div class="product-info">
+
+                    <h3>
+                        One Piece T-Shirt
+                    </h3>
+
+                    <p class="anime-name">
+                        One Piece
+                    </p>
+
+                    <p class="price">
+                        ₹799
+                    </p>
+
+                    <a href="#" class="buy-btn">
+                        Add to Cart
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ZORO -->
+
+            <div class="product">
+
+                <img
+                    class="product-image"
+                    src="https://animemart.in/cdn/shop/files/Roronoa_Zoro_Oversized_T-Shirt_Back.jpg?v=1775286713&width=1024"
+                    alt="Zoro T-Shirt"
+                >
+
+                <div class="product-info">
+
+                    <h3>
+                        Roronoa Zoro T-Shirt
+                    </h3>
+
+                    <p class="anime-name">
+                        One Piece
+                    </p>
+
+                    <p class="price">
+                        ₹599
+                    </p>
+
+                    <a href="#" class="buy-btn">
+                        Add to Cart
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- JUJUTSU KAISEN -->
+
+            <div class="product">
+
+                <img
+    class="product-image"
+    src="https://common-ground.in/cdn/shop/files/Front_1_c_2.jpg"
+    alt="Satoru Gojo T-Shirt"
+>
+
+                <div class="product-info">
+
+                    <h3>
+                        Gojo Graphic T-Shirt
+                    </h3>
+
+                    <p class="anime-name">
+                        Jujutsu Kaisen
+                    </p>
+
+                    <p class="price">
+                        ₹999
+                    </p>
+
+                    <a href="#" class="buy-btn">
+                        Add to Cart
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- DEMON SLAYER -->
+
+            <div class="product">
+
+                <img
+                    class="product-image"
+                    src="https://a.storyblok.com/f/178900/640x640/739bd4e44d/69ba0ef1261fc31cf964f443ce630bad1597688322_main.jpg/m/filters%3Aquality%2895%29format%28webp%29"
+                    alt="Demon Slayer T-Shirt"
+                >
+
+                <div class="product-info">
+
+                    <h3>
+                        Demon Slayer T-Shirt
+                    </h3>
+
+                    <p class="anime-name">
+                        Demon Slayer
+                    </p>
+
+                    <p class="price">
+                        ₹899
+                    </p>
+
+                    <a href="#" class="buy-btn">
+                        Add to Cart
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026 <span>OtakuStore</span>
+            | Made for Anime Fans
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
