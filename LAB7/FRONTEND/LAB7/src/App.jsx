@@ -5,6 +5,13 @@ const b1 = {
   quantity : 5,
   rating : 4.5
 } ;
+const b2 = {
+  picurl : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHsdo5fnB0yhnhydc-4vAKWgQmd1itUpZRc4LzMnM6GiUiGfNgmQrhCeA&s=10",
+  title : "Let us React",
+  price : 2886.00,
+  quantity : 3,
+  rating : 3.5
+} ;
 
 function Book(){
   return (
