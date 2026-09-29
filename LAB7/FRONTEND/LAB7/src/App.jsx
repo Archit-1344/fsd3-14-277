@@ -9,11 +9,11 @@ const b1 = {
 function Book(){
   return (
     <div>
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHsdo5fnB0yhnhydc-4vAKWgQmd1itUpZRc4LzMnM6GiUiGfNgmQrhCeA&s=10" alt="Book" height="200" width="150" />
-      <h1>Let us React</h1>
-      <h2>Price : 765.00</h2>
-      <h3>Quantity :5</h3>
-      <h4>Rating : 4.5</h4>
+      <img src={b1.picurl} alt="Book" height="200" width="150" />
+      <h1>{b1.title}</h1>
+      <h2>Price : {b1.price}</h2>
+      <h3>Quantity :{b1.quantity}</h3>
+      <h4>Rating : {b1.rating}</h4>
     </div>
   ) ;
 }
