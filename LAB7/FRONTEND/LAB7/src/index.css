@@ -1,25 +1,199 @@
-*{
-  margin: 0 ;
+/* =========================
+   Global Reset
+========================= */
+
+* {
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.container{
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f6f8;
+  color: #222;
+  min-height: 100vh;
+}
+
+
+/* =========================
+   Main Heading
+========================= */
+
+h1 {
+  text-align: center;
+  margin: 30px 0;
+  font-size: 36px;
+  color: #1e293b;
+}
+
+
+/* =========================
+   Books Container
+========================= */
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+
+  margin: 0 auto 40px;
+
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  gap: 20px;
+  align-items: stretch;
+
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+
+/* =========================
+   Book Card
+========================= */
+
+.container > div {
+  width: 240px;
+  min-height: 450px;
+
   padding: 20px;
+
+  background-color: #ffffff;
+
+  border: 1px solid #0f0f10;
+  border-radius: 12px;
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+
+  transition: all 0.3s ease;
 }
-.book{
-  padding : 20px;
-  border: 1px solid black;
+
+
+/* Card Hover Effect */
+
+.container > div:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
 }
-.book img{
+
+
+/* =========================
+   Book Image
+========================= */
+
+.container > div img {
   width: 200px;
   height: 300px;
+
+  object-fit: cover;
+
+  border-radius: 6px;
+
+  margin-bottom: 15px;
+
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
 }
-.book h1{
-  font-size: 1.5 rem ;
+
+
+/* =========================
+   Book Name
+========================= */
+
+.container > div h1 {
+  font-size: 18px;
+  line-height: 1.4;
+
+  color: #1e40af;
+
+  margin: 0 0 12px;
+}
+
+
+/* =========================
+   Price
+========================= */
+
+.container > div h2 {
+  font-size: 17px;
+  color: #16a34a;
+
+  margin: 5px 0;
+
+  font-weight: 700;
+}
+
+
+/* =========================
+   Quantity
+========================= */
+
+.container > div h3 {
+  font-size: 15px;
+  color: #475569;
+
+  margin: 5px 0;
+}
+
+
+/* =========================
+   Rating
+========================= */
+
+.container > div h4 {
+  font-size: 15px;
+  color: #f59e0b;
+
+  margin: 5px 0;
+
+  font-weight: 700;
+}
+
+
+/* =========================
+   Responsive Design
+========================= */
+
+@media (max-width: 768px) {
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .container {
+    width: 95%;
+    gap: 20px;
+  }
+
+  .container > div {
+    width: 220px;
+  }
+
+  .container > div img {
+    width: 180px;
+    height: 270px;
+  }
+}
+
+
+@media (max-width: 500px) {
+
+  h1 {
+    font-size: 26px;
+    margin: 20px 0;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container > div {
+    width: 280px;
+  }
 }
