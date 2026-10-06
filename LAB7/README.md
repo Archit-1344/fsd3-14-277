@@ -140,3 +140,4 @@ All CSS properties must use camelCase, for example `textAlign`.
     Rating: {rating}
 </h4>
 ```
+App.jsx should contain minimum code
