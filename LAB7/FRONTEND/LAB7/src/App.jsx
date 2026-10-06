@@ -3,6 +3,7 @@ import Pen from "./components/Pen";
 import {books} from "./data/books";
 import {pens} from "./data/pens" ;
 import Fruits from "./components/Fruits";
+import Event from "./components/Event" ;
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
     <div className="container">
         <Fruits />
     </div>
+    <Event   />
     </>
   );
 }
